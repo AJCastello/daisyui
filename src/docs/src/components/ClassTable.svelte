@@ -15,6 +15,7 @@
           <span><Translate text="Class name" /></span>
         </th>
         <th class="bg-base-200 lg:py-3"><Translate text="Type" /></th>
+        <th class="bg-base-200 lg:py-3"><Translate text="Param" /></th>
         <th class="bg-base-200 rounded-e-box lg:py-3" />
       </tr>
     </thead>
@@ -46,7 +47,7 @@
               <div class="text-xs">
                 <Translate
                   text="To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>" />
-              </div>
+              </div>              
             </div>
           </td>
         </tr>
@@ -54,7 +55,7 @@
       {#each data as item, index}
         <tr>
           <th class="w-3/12 font-normal">
-            <span class="whitespace-nowrap font-mono lowercase">
+            <span class="whitespace-nowrap font-mono lowercase before:block before:z-[5] before:absolute before:-inset-1 before:w-0.5 before:h-[200%] before:top-[-50%] before:bg-base-content/30 relative after:block after:absolute after:-inset-1 after:w-3 after:h-0.5 after:top-[50%] after:bg-base-content/30 relative pl-4">
               {`${item.prefix !== false ? $prefix : ""}${item.class}`}
             </span>
           </th>
@@ -81,7 +82,9 @@
               </div>
             {/if}
           </td>
-          <td class="w-8/12 min-w-[20rem]">{item.desc}</td>
+          <td class="w-1/12">{item.param ?? ""}</td>
+          <td class="w-7/12 min-w-[20rem]">{item.desc}</td>
+          
         </tr>
       {/each}
     </tbody>
