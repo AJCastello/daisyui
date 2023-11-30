@@ -16,10 +16,10 @@ layout: components
 <ClassTable
 data="{[
   { type: 'component', class: 'alert', desc: 'Container element' },
-  { type: 'modifier', class: 'alert-info', desc: 'Alert with `info` color' },
-  { type: 'modifier', class: 'alert-success', desc: 'Alert with `success` color' },
-  { type: 'modifier', class: 'alert-warning', desc: 'Alert with `warning` color' },
-  { type: 'modifier', class: 'alert-error', desc: 'Alert with `error` color' },
+  { type: 'modifier', class: 'alert-info', param: 'color', desc: 'Alert with `info` color' },
+  { type: 'modifier', class: 'alert-success', param: 'color', desc: 'Alert with `success` color' },
+  { type: 'modifier', class: 'alert-warning', param: 'color', desc: 'Alert with `warning` color' },
+  { type: 'modifier', class: 'alert-error', param: 'color', desc: 'Alert with `error` color' },
 ]}"
 />
 
